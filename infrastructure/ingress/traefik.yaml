@@ -11,6 +11,6 @@ spec:
         kind: GitRepository
         name: flux-system
         namespace: flux-system
-      path: ./charts/traefik
+        path: ./charts/traefik
       version: "0.1.0"
   interval: 1h0m0s
