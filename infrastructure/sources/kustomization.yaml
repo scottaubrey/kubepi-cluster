@@ -4,4 +4,3 @@ namespace: flux-system
 resources:
   - kubepi.yaml
   - longhorn.yaml
-  - jfrog.yaml
