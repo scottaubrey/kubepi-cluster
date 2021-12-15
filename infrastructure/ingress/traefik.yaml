@@ -8,9 +8,8 @@ spec:
     spec:
       chart: traefik-ingress
       sourceRef:
-        kind: GitRepository
-        name: flux-system
+        kind: HelmRepository
+        name: kubepi
         namespace: flux-system
-        path: ./charts/traefik
-      version: "0.1.0"
+      version: "0.2.0"
   interval: 1h0m0s
