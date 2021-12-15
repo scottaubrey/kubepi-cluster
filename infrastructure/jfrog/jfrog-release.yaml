@@ -7,7 +7,7 @@ spec:
   releaseName: artifactory
   chart:
     spec:
-      chart: jfrog/artifactory-jcr
+      chart: artifactory-jcr
       sourceRef:
         kind: HelmRepository
         name: jfrog
