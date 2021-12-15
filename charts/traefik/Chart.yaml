@@ -1,6 +1,6 @@
 apiVersion: v2
 name: traefik-ingress
-version: 0.1.0-dev
+version: 0.2.0
 type: application
 appVersion: "2.5.5"
 icon: https://traefik.io/static/traefik-proxy-logo--white-82153be41e0ce620a921b4bce974f6d8.svg

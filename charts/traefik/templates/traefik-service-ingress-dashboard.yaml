@@ -9,5 +9,4 @@ spec:
     - name: admin
       protocol: TCP
       port: 8080
-      nodePort: {{ .Values.traefik.adminPort }}
-  type: NodePort
+  type: ClusterIP
