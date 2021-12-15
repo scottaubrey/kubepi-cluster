@@ -1,0 +1,17 @@
+apiVersion: v1
+entries:
+  traefik-ingress:
+  - apiVersion: v2
+    appVersion: 2.5.5
+    created: "2021-12-15T09:54:55.895209Z"
+    digest: 1b794115e609cb5fc125f486a31545a6cb6333ea64550ac6d7577ee171a76388
+    icon: https://traefik.io/static/traefik-proxy-logo--white-82153be41e0ce620a921b4bce974f6d8.svg
+    maintainers:
+    - email: scott@aubrey.org.uk
+      name: Scott Aubrey
+    name: traefik-ingress
+    type: application
+    urls:
+    - traefik-ingress-0.1.0-dev.tgz
+    version: 0.1.0-dev
+generated: "2021-12-15T09:54:55.894409Z"
