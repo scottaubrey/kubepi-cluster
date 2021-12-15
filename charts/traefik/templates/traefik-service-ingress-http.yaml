@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: traefik-ingress-http
+spec:
+  selector:
+    k8s-app: traefik-ingress-lb
+  ports:
+    - name: web
+      protocol: TCP
+      port: 80
+      nodePort: {{ .Values.traefik.httpPort }}
+  type: NodePort

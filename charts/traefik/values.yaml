@@ -1,0 +1,4 @@
+traefik:
+  adminPort: 30880
+  httpPort: 30080
+  httpsPort: 30443

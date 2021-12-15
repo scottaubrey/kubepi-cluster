@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: traefik-ingress-dashboard
+spec:
+  selector:
+    k8s-app: traefik-ingress-lb
+  ports:
+    - name: admin
+      protocol: TCP
+      port: 8080
+      nodePort: {{ .Values.traefik.adminPort }}
+  type: NodePort
