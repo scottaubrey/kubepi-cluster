@@ -12,5 +12,4 @@ spec:
         name: kubepi
         namespace: flux-system
       version: "0.1.0"
-  targetNamespace: "traefik"
   interval: 1h0m0s
