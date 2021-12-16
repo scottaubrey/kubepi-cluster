@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: peerscout
+  labels:
+    {{- include "peerscout.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "peerscout.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "peerscout.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ include "peerscout.serviceAccountName" . }}
+      containers:
+        - name: peerscout
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /api/status
+              port: http
+            initialDelaySeconds: 5
+            timeoutSeconds: 30
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /api/status
+              port: http
+            initialDelaySeconds: 5
+            timeoutSeconds: 30
+            periodSeconds: 10
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          {{- if .Values.env }}
+          env:
+          {{- range $key, $value := .Values.env }}
+          - name: {{ $key }}
+            value: "{{ $value }}"
+          {{- end }}
+          {{- end }}
+          volumeMounts:
+            - name: aws-credentials-sealed-secret-volume
+              mountPath: /root/.aws
+              readOnly: true
+            - name: gcp-credentials-sealed-secret-volume
+              mountPath: /root/.gcp
+              readOnly: true
+      volumes:
+        - name: aws-credentials-sealed-secret-volume
+          secret:
+          secretName: aws-credentials
+        - name: gcp-credentials-sealed-secret-volume
+          secret:
+          secretName: gcp-credentials
