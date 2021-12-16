@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  peerscout:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-12-16T16:29:44.542457028Z"
+    description: Peerscout API package
+    digest: 3ab6a92a73361fc28081acc9904c53332b38c34dd9963358f618bb8aa864bad5
+    name: peerscout
+    type: application
+    urls:
+    - https://github.com/scottaubrey/kubepi-cluster/releases/download/peerscout-0.0.1/peerscout-0.0.1.tgz
+    version: 0.0.1
   traefik-ingress:
   - apiVersion: v2
     appVersion: 2.5.5
@@ -53,4 +64,4 @@ entries:
     urls:
     - traefik-ingress-0.1.0-dev.tgz
     version: 0.1.0-dev
-generated: "2021-12-15T14:36:31.071522755Z"
+generated: "2021-12-16T16:29:44.542616388Z"
