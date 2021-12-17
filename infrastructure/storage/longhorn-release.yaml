@@ -12,4 +12,7 @@ spec:
         name: longhorn
         namespace: flux-system
       version: "1.2.2"
+  values:
+    defaultSettings:
+      defaultDataPath: /data
   interval: 1h0m0s
