@@ -17,9 +17,12 @@ service:
 
 ingress:
   hosts:
-    - host: peerscout-api.local
-      paths: []
+  - host: peerscout-api.local
+    paths:
+    - "/"
   tls: []
+  annotations: []
+
 
 resources: {}
 

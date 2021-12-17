@@ -1,3 +1,4 @@
+{{- $svcPort := .Values.service.port -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -24,10 +25,13 @@ spec:
     - host: {{ .host | quote }}
       http:
         paths:
-          {{- range .paths }}
-          - path: {{ . }}
-            backend:
-              serviceName: peerscout
-              servicePort: {{ .Values.service.port }}
-          {{- end }}
+        {{- range .paths }}
+        - path: {{ . }}
+          pathType: Prefix
+          backend:
+            service:
+              name: peerscout
+              port:
+                number: {{ $svcPort }}
+        {{- end }}
     {{- end }}
