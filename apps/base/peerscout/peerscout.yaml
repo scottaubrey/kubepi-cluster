@@ -20,7 +20,6 @@ spec:
       DEPLOYMENT_ENV: dev
       SPACY_LANGUAGE_MODEL_NAME: "en_core_web_lg"
     ingress:
-      enabled: "true"
       annotations:
         ingress.kubernetes.io/auth-secret: peerscout-basic-auth
         ingress.kubernetes.io/auth-type: basic
