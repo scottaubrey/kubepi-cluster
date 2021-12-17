@@ -3,6 +3,9 @@ kind: HelmRelease
 metadata:
   name: peerscout
 spec:
+  chart:
+    spec:
+      version: "0.0.2"
   values:
     ingress:
       hosts:
