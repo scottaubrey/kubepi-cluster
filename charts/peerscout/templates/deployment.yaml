@@ -55,7 +55,7 @@ spec:
       volumes:
         - name: aws-credentials-sealed-secret-volume
           secret:
-          secretName: aws-credentials
+            secretName: aws-credentials
         - name: gcp-credentials-sealed-secret-volume
           secret:
-          secretName: gcp-credentials
+            secretName: gcp-credentials
