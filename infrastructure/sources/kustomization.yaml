@@ -4,3 +4,4 @@ namespace: flux-system
 resources:
   - kubepi.yaml
   - longhorn.yaml
+  - bitnami-labs-sealedsecrets.yaml
