@@ -3,4 +3,6 @@ kind: Kustomization
 namespace: peerscout
 resources:
   - namespace.yaml
+  - aws-credentials-sealed-secret.yaml
+  - gcp-credentials-sealed-secret.yaml
   - peerscout.yaml

@@ -4,3 +4,5 @@ resources:
   - ../base/peerscout
 patchesStrategicMerge:
   - peerscout-values.yaml
+  - aws-credentials-sealed-secret.yaml
+  - gcp-credentials-sealed-secret.yaml
