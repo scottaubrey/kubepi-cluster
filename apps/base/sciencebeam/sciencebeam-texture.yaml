@@ -1,0 +1,39 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: sciencebeam-texture
+  namespace: prod
+  annotations:
+    fluxcd.io/automated: 'true'
+    filter.fluxcd.io/chart-image: semver:*
+
+spec:
+  releaseName: sciencebeam-texture--prod
+  chart:
+    spec:
+      sourceRef:
+        kind: GitRepository
+        name: sciencebeam-texture
+  values:
+    image:
+      repository: elifesciences/sciencebeam_texture
+      tag: 0.0.12
+    ingress:
+      enabled: "true"
+      annotations:
+        cert-manager.io/cluster-issuer: "letsencrypt-prod"
+      hosts:
+      - host: sciencebeam-texture.elifesciences.org
+        paths:
+        - "/"
+      - host: sciencebeam.org
+        paths:
+        - "/"
+      tls:
+      - secretName: sciencebeam-letsencrypt-cert
+        hosts:
+        - sciencebeam.org
+
+    resources:
+      requests:
+        memory: 128Mi
