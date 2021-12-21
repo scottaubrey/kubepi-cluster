@@ -1,3 +1,4 @@
 traefik:
   httpPort: 30080
   httpsPort: 30443
+  ingressClass:

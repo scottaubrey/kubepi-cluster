@@ -6,8 +6,12 @@ spec:
   selector:
     k8s-app: traefik-ingress-lb
   ports:
-    - name: web
+    - name: http
       protocol: TCP
       port: 80
       nodePort: {{ .Values.traefik.httpPort }}
+    - name: https
+      protocol: TCP
+      port: 443
+      nodePort: {{ .Values.traefik.httpsPort }}
   type: NodePort
