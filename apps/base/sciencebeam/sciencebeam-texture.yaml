@@ -11,7 +11,7 @@ spec:
   releaseName: sciencebeam-texture--prod
   chart:
     spec:
-      chart: sciencebeam-texture
+      chart: ./charts/sciencebeam-texture
       version: "0.1.0"
       sourceRef:
         kind: GitRepository
