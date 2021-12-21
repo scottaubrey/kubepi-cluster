@@ -1,0 +1,14 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: sciencebeam
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/elifesciences/sciencebeam-charts
+  ignore: |
+    # exclude all
+    /*
+    # include charts directory
+    !/charts/
