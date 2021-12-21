@@ -4,3 +4,4 @@ namespace: ingress
 resources:
   - namespace.yaml
   - traefik.yaml
+  - nginx.yaml
