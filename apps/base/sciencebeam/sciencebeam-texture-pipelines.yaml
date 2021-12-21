@@ -1,0 +1,58 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: sciencebeam-texture-sciencebeam
+  namespace: prod
+  annotations:
+    fluxcd.io/automated: 'true'
+    filter.fluxcd.io/chart-image: semver:*
+    filter.fluxcd.io/grobid: glob:*
+
+spec:
+  releaseName: sciencebeam-texture-sciencebeam--prod
+  chart:
+    git: https://github.com/elifesciences/sciencebeam-charts
+    path: sciencebeam-pipelines
+    ref: add-sciencebeam-pipelines-chart
+
+  values:
+    image:
+      repository: elifesciences/sciencebeam-pipelines
+      tag: 0.1.2
+    env:
+      SCIENCEBEAM__XSLT_TEMPLATE_PARAMETERS__ACKNOWLEDGEMENT_TARGET: "body"
+      SCIENCEBEAM__XSLT_TEMPLATE_PARAMETERS__ANNEX_TARGET: "body"
+    grobid:
+      image:
+        repository: elifesciences/grobid_unstable
+        tag: "72fcce29839111c955ae5d6438fba62436bccbc8"
+      env:
+        GROBID__FEATURES__REMOVE_LINE_NUMBERS: "false"
+        GROBID__3RDPARTY__PDF2XML__MEMORY__TIMEOUT__SEC: "300"
+        GROBID__PDF__BLOCKS__MAX: "1000000"
+        GROBID__PDF__TOKENS__MAX: "10000000"
+        GROBID__HEADER__USE_LABELED_ABSTRACT: "false"
+      warmup:
+        enabled: false
+        image:
+          repository: pstauffer/curl
+          tag: v1.0.3
+      resources:
+        requests:
+          memory: 3Gi
+        limits:
+          memory: 8Gi
+    ingress:
+      enabled: "true"
+      hosts:
+      - host: sciencebeam-texture.elifesciences.org
+        paths:
+        - "/api"
+      - host: sciencebeam.org
+        paths:
+        - "/api"
+      annotations:
+        nginx.ingress.kubernetes.io/proxy-body-size: 120m
+    resources:
+      requests:
+        memory: 128Mi
