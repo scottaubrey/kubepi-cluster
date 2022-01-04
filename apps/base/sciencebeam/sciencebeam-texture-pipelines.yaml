@@ -11,9 +11,13 @@ metadata:
 spec:
   releaseName: sciencebeam-texture-sciencebeam--prod
   chart:
-    git: https://github.com/elifesciences/sciencebeam-charts
-    path: sciencebeam-pipelines
-    ref: add-sciencebeam-pipelines-chart
+    spec:
+      chart: ./sciencebeam-pipelines
+      version: "0.1.0"
+      sourceRef:
+        kind: GitRepository
+        name: sciencebeam
+
 
   values:
     image:
