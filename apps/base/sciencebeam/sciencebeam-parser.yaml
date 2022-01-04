@@ -43,14 +43,3 @@ spec:
         memory: 3Gi
       limits:
         memory: 8Gi
-
-  releaseName: traefik-ingress
-  chart:
-    spec:
-      chart: traefik-ingress
-      sourceRef:
-        kind: HelmRepository
-        name: kubepi
-        namespace: flux-system
-      version: "0.2.0"
-  interval: 1h0m0s
