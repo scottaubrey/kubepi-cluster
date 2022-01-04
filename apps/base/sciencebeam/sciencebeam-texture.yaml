@@ -28,10 +28,12 @@ spec:
       hosts:
       - host: sciencebeam-texture.elifesciences.org
         paths:
-        - "/"
+        - path: /
+          pathType: ImplementationSpecific
       - host: sciencebeam.org
         paths:
-        - "/"
+        - path: /
+          pathType: ImplementationSpecific
       tls:
       - secretName: sciencebeam-letsencrypt-cert
         hosts:
