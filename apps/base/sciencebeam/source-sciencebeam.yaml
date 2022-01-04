@@ -5,10 +5,5 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: develop
-  url: https://github.com/elifesciences/sciencebeam-charts
-  ignore: |
-    # exclude all
-    /*
-    # include charts directory
-    !/charts/
+    branch: implement-newer-kuberenetes-ingress
+  url: https://github.com/scottaubrey/sciencebeam-charts
