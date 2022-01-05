@@ -40,11 +40,16 @@ spec:
         image:
           repository: pstauffer/curl
           tag: v1.0.3
+        periodSeconds: 600
       resources:
         requests:
           memory: 3Gi
         limits:
           memory: 8Gi
+      readinessProbe:
+        failureThreshold: 6000
+      livenessProbe:
+        failureThreshold: 60
     ingress:
       enabled: "true"
       hosts:
