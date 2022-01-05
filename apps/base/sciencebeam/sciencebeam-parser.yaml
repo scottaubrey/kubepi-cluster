@@ -48,3 +48,5 @@ spec:
         memory: 3Gi
       limits:
         memory: 8Gi
+    startupProbe:
+      failureThreshold: 6000
