@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: basex-validator
+resources:
+  - namespace.yaml
+  - basex-validator-source.yaml
+  # - basex-validator.yaml

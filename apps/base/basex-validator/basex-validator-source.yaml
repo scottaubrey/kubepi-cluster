@@ -1,0 +1,14 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: basex-validator
+spec:
+  interval: 1m0s
+  ref:
+    branch: master
+  url: https://github.com/elifesciences/basex-validator-formula
+  ignore: |
+    # exclude all
+    /*
+    # include charts directory
+    !/helm/basex-validator/
