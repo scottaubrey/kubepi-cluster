@@ -17,8 +17,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: sciencebeam
-
-
+  interval: 1m
   values:
     image:
       repository: elifesciences/sciencebeam-pipelines
