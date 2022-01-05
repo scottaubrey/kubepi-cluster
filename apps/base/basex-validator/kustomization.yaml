@@ -4,4 +4,4 @@ namespace: basex-validator
 resources:
   - namespace.yaml
   - basex-validator-source.yaml
-  # - basex-validator.yaml
+  - basex-validator.yaml
