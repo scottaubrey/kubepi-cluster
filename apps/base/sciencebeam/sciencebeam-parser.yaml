@@ -31,10 +31,12 @@ spec:
       hosts:
       - host: sciencebeam-texture.elifesciences.org
         paths:
-        - "/api_biorxiv(/|$)(.*)"
+        - path: "/api_biorxiv(/|$)(.*)"
+          pathType: ImplementationSpecific
       - host: sciencebeam.org
         paths:
-        - "/api_biorxiv(/|$)(.*)"
+        - path: "/api_biorxiv(/|$)(.*)"
+          pathType: ImplementationSpecific
       annotations:
         nginx.ingress.kubernetes.io/rewrite-target: /api/$2
         nginx.ingress.kubernetes.io/proxy-body-size: 120m

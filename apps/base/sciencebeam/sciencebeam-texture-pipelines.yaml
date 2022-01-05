@@ -50,10 +50,12 @@ spec:
       hosts:
       - host: sciencebeam-texture.elifesciences.org
         paths:
-        - "/api"
+        - path: "/api"
+          pathType: ImplementationSpecific
       - host: sciencebeam.org
         paths:
-        - "/api"
+        - path: "/api"
+          pathType: ImplementationSpecific
       annotations:
         nginx.ingress.kubernetes.io/proxy-body-size: 120m
     resources:
