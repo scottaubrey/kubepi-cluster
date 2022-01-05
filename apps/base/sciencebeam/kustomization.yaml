@@ -7,4 +7,4 @@ resources:
   - namespace.yaml
   - sciencebeam-texture.yaml
   - sciencebeam-texture-pipelines.yaml
-  - sciencebeam-parser.yaml
+  # - sciencebeam-parser.yaml
