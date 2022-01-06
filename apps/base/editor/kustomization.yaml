@@ -8,3 +8,4 @@ resources:
   - database-service.yaml
   - editor.yaml
   - secret/pdf-secret.yaml
+  - secret/database-secret.yaml
