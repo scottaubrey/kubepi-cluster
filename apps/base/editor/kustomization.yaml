@@ -6,3 +6,4 @@ resources:
   - source-editor.yaml
   - mongodb.yaml
   - database-service.yaml
+  - editor.yaml
