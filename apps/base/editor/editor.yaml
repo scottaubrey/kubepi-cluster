@@ -14,7 +14,7 @@ spec:
   chart:
     spec:
       chart: ./helm/libero-editor
-      version: "0.1.0"
+      version: "0.0.14"
       sourceRef:
         kind: GitRepository
         name: libero-editor
@@ -53,7 +53,7 @@ spec:
 
     database:
       endpoint: 'database.editor.svc.cluster.local'
-      query: 'ssl=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false'
+      query: 'readPreference=secondaryPreferred&retryWrites=false'
       secret: editor-database-secret
       name: 'editor'
     aws:
