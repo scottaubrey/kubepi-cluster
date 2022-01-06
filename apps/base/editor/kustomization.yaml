@@ -4,3 +4,4 @@ namespace: editor
 resources:
   - namespace.yaml
   - source-editor.yaml
+  - mongodb.yaml
