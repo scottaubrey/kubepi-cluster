@@ -14,6 +14,9 @@ spec:
       version: "3.4.5"
   interval: 1h0m0s
   values:
+    resources:
+      requests:
+        memory: 512Mi
     replicas: 4
     persistence:
       storageClass: longhorn
