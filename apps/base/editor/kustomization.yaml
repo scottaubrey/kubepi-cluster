@@ -9,3 +9,4 @@ resources:
   - editor.yaml
   - secret/pdf-secret.yaml
   - secret/database-secret.yaml
+  - secret/aws-secret.yaml
