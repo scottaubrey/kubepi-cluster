@@ -1,0 +1,63 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: libero-editor
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/client: glob:master-*-*
+    filter.fluxcd.io/articleStore: glob:master-*-*
+    filter.fluxcd.io/pdfService: glob:master-*-*
+    filter.fluxcd.io/transformer: glob:master-*-*
+
+spec:
+  releaseName: libero-editor
+  chart:
+    spec:
+      chart: ./helm/libero-editor
+      version: "0.1.0"
+      sourceRef:
+        kind: GitRepository
+        name: libero-editor
+  interval: 1m
+  values:
+    replicaCount: 1
+    ingress:
+      host: libero-editor--staging.elifesciences.org
+    client:
+      image:
+        repository: liberoadmin/editor-client
+        tag: master-13afe592-20211001.1421
+    articleStore:
+      image:
+        repository: liberoadmin/editor-article-store
+        tag: master-d356a32b-20211013.0906
+      resources:
+        request:
+          memory: 500Mi
+          cpu: 200m
+      importTransformEnabled: 'true'
+      exportTransformEnabled: 'true'
+    pdfService:
+      image:
+        repository: liberoadmin/editor-pdf-service
+        tag: master-a450c771-20210719.1240
+      secret: libero-editor-pdf-secret
+    transformer:
+      image:
+        repository: elifesciences/basex-transformer
+        tag: master-511598d8-20210428.0822
+      resources:
+        request:
+          memory: 500Mi
+          cpu: 200m
+
+    database:
+      endpoint: 'database.editor.svc.cluster.local'
+      query: 'ssl=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false'
+      secret: libero-editor-database-secret
+      name: 'editor'
+    aws:
+      endpoint: 'minio.minio.svc.cluster.local:9000'
+      secret: libero-editor-aws-secret
+      sqsUrl: 'http://sqs.goaws.svc.cluster.local:4100/100010001000/elife-libero-editor-import--staging'
+      bucket: 'staging-elife-libero-editor'
