@@ -41,7 +41,7 @@ spec:
       image:
         repository: liberoadmin/editor-pdf-service
         tag: master-a450c771-20210719.1240
-      secret: libero-editor-pdf-secret
+      secret: editor-pdf-secret
     transformer:
       image:
         repository: elifesciences/basex-transformer
