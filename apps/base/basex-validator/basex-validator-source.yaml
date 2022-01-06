@@ -5,8 +5,8 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: master
-  url: https://github.com/elifesciences/basex-validator-formula
+    branch: implement-newer-kuberenetes-ingress
+  url: https://github.com/scottaubrey/basex-validator-formula
   ignore: |
     # exclude all
     /*
