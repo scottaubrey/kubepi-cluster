@@ -7,3 +7,4 @@ resources:
   - mongodb.yaml
   - database-service.yaml
   - editor.yaml
+  - secret/pdf-secret.yaml
