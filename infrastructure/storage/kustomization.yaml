@@ -6,3 +6,4 @@ resources:
   - longhorn-release.yaml
   - longhorn-secret.yaml
   - longhorn-ingress.yaml
+  - storageclass.yaml
