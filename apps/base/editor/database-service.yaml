@@ -8,7 +8,7 @@ spec:
   type: ClusterIP
   ports:
     - port: 27017
-      targetPort: db
+      targetPort: 27017
       protocol: TCP
       name: db
   selector:
