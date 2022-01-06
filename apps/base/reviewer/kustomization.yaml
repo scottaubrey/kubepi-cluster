@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: reviewer
 resources:
   - namespace.yaml
+  - source-reviewer.yaml

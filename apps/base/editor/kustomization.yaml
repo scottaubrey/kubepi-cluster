@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: editor
 resources:
   - namespace.yaml
+  - source-editor.yaml
