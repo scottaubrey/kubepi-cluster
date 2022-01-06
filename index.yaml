@@ -44,6 +44,19 @@ entries:
   traefik-ingress:
   - apiVersion: v2
     appVersion: 2.5.5
+    created: "2022-01-06T12:41:23.89502111Z"
+    digest: f95bdc9647988cabef2632848cf1b7f5c08e14befdb8e7b24f995c6f27fec0a4
+    icon: https://traefik.io/static/traefik-proxy-logo--white-82153be41e0ce620a921b4bce974f6d8.svg
+    maintainers:
+    - email: scott@aubrey.org.uk
+      name: Scott Aubrey
+    name: traefik-ingress
+    type: application
+    urls:
+    - https://github.com/scottaubrey/kubepi-cluster/releases/download/traefik-ingress-0.3.2/traefik-ingress-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
+    appVersion: 2.5.5
     created: "2022-01-06T12:15:08.193739855Z"
     digest: 003a5352279366095f0671fd4f1973583d2c56ef838c97e84923b518ed5e8c7e
     icon: https://traefik.io/static/traefik-proxy-logo--white-82153be41e0ce620a921b4bce974f6d8.svg
@@ -120,4 +133,4 @@ entries:
     urls:
     - traefik-ingress-0.1.0-dev.tgz
     version: 0.1.0-dev
-generated: "2022-01-06T12:15:08.193770156Z"
+generated: "2022-01-06T12:41:23.89921975Z"
