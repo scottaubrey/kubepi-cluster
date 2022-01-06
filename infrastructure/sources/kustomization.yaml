@@ -6,3 +6,4 @@ resources:
   - longhorn.yaml
   - bitnami-labs-sealedsecrets.yaml
   - ingress-nginx.yaml
+  - minio.yaml
