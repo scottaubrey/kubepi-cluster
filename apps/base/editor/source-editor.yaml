@@ -5,5 +5,5 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: master
-  url: https://github.com/elifesciences/libero-editor-formula
+    branch: implement-newer-kuberenetes-ingress
+  url: https://github.com/scottaubrey/libero-editor-formula
