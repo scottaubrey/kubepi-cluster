@@ -57,7 +57,7 @@ spec:
       secret: editor-database-secret
       name: 'editor'
     aws:
-      endpoint: 'minio.minio.svc.cluster.local:9000'
+      endpoint: 'localstack.localstack.cluster.local:4566'
       secret: editor-aws-secret
-      sqsUrl: 'http://sqs.goaws.svc.cluster.local:4100/100010001000/elife-libero-editor-import--staging'
+      sqsUrl: 'http://localstack.localstack.cluster.local:4566/000000000000/elife-libero-editor-import--staging'
       bucket: 'staging-elife-libero-editor'
