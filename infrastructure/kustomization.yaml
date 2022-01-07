@@ -5,6 +5,5 @@ resources:
   - ingress
   - storage
   - sealed-secrets
-  - goaws
   - minio
   - localstack
