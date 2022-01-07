@@ -15,6 +15,8 @@ spec:
         {{- include "peerscout.selectorLabels" . | nindent 8 }}
     spec:
       serviceAccountName: {{ include "peerscout.serviceAccountName" . }}
+      nodeSelector:
+        kubernetes.io/arch: amd64
       containers:
         - name: peerscout
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"

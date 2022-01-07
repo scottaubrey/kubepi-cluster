@@ -4,6 +4,6 @@ description: Peerscout API package
 
 type: application
 
-version: 0.0.4
+version: 0.0.5
 
 appVersion: 1.16.0
