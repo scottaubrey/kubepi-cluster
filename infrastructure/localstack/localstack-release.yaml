@@ -1,0 +1,15 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: localstack
+spec:
+  releaseName: localstack
+  chart:
+    spec:
+      chart: localstack
+      sourceRef:
+        kind: HelmRepository
+        name: localstack
+      version: "0.3.7"
+  values:
+  interval: 1h0m0s
