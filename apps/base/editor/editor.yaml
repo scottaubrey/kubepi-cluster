@@ -44,8 +44,8 @@ spec:
       secret: editor-pdf-secret
     transformer:
       image:
-        repository: elifesciences/basex-transformer
-        tag: master-511598d8-20210428.0822
+        repository: scottaubrey/elifesciences-basex-validator
+        tag: latest
       resources:
         request:
           memory: 500Mi
