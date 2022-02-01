@@ -29,7 +29,7 @@ data:
       historyCheckColumn: 'historyId'
     gmailHistoryData:
       tempTable: 'temp_gmail_history_details'
-  
+
   ejp-xml-data-pipeline.config.yaml: |-
     gcpProjectName: 'elife-data-pipeline'
     dataPipelineId: s3_ejp_xml_pipeline_id
@@ -64,7 +64,7 @@ data:
         queryTemplate: |
               SELECT
                 CAST(manuscript_id AS STRING) AS manuscript_id,
-                version_id, IFNULL(abstract, "") AS abstract, 
+                version_id, IFNULL(abstract, "") AS abstract,
                 modified_timestamp
               FROM `{project}.{dataset}.mv_manuscript_version`
               WHERE modified_timestamp > TIMESTAMP '{latest_state_value}'
