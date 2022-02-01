@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minio-ingress
+  annotations:
+    # prevent the controller from redirecting (308) to HTTPS
+    ingress.kubernetes.io/ssl-redirect: 'false'
+spec:
+  rules:
+  - host: "minio.kubepi"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: minio
+            port:
+              number: 9000
+  - host: "minio-console.kubepi"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: minio-console
+            port:
+              number: 9001
