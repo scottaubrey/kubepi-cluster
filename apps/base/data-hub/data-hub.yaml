@@ -2,7 +2,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: data-hub
-  namespace: data-hub
   annotations:
     fluxcd.io/automated: 'true'
     repository.fluxcd.io/airflow: airflow.image.repository
