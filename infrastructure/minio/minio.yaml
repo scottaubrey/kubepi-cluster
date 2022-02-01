@@ -21,3 +21,8 @@ spec:
     persistence:
       storageClass: longhorn
       size: 5Gi
+    ingress:
+      enabled: false
+      path: /
+      hosts:
+        - minio.kubepi
