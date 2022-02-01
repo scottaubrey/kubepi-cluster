@@ -1,6 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+- namespace.yaml
 - data-hub-source.yaml
 - data-hub-configmaps.yaml
+# - data-hub-secrets/civi-key.yaml
+# - data-hub-secrets/credentials.yaml
+# - data-hub-secrets/gcloud.yaml
+# - data-hub-secrets/gmail.yaml
+# - data-hub-secrets/google-auth.yaml
+# - data-hub-secrets/monitoring-urls.yaml
+# - data-hub-secrets/toggl.yaml
+# - data-hub-secrets/twitter.yaml
 - data-hub.yaml
