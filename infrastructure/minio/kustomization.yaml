@@ -4,4 +4,3 @@ namespace: minio
 resources:
   - namespace.yaml
   - minio.yaml
-  - minio-ingress.yaml
