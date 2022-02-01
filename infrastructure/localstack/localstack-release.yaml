@@ -12,4 +12,11 @@ spec:
         name: localstack
       version: "0.3.7"
   values:
+    ingress:
+      enabled: false
+      hosts:
+      - host: localstack.kubepi
+        paths:
+        - path: /
+          pathType: ImplementationSpecific
   interval: 1h0m0s
