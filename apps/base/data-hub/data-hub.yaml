@@ -22,9 +22,9 @@ spec:
     ingress:
       enabled: true
       web:
-        host: data-hub--test.elifesciences.org
+        host: data-hub--test.kubepi
       flower:
-        host: data-hub--test.elifesciences.org
+        host: data-hub--test.kubepi
         path: "/flower"
     airflow:
       # select intel nodes only
