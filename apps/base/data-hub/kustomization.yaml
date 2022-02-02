@@ -5,4 +5,15 @@ resources:
 - namespace.yaml
 - data-hub-source.yaml
 - data-hub-configmaps.yaml
+- secrets/credentials.yaml
+- secrets/civi-key.yaml
+- secrets/gcloud.yaml
+- secrets/gmail.yaml
+- secrets/google-auth.yaml
+- secrets/surveymonkey.yaml
+- secrets/toggl.yaml
+- secrets/twitter.yaml
+- secrets/monitoring-urls.yaml
+- secrets/webserver-secret-key.yaml
+- secrets/fernet-key.yaml
 - data-hub.yaml
