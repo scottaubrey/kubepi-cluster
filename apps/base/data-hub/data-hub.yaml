@@ -29,7 +29,7 @@ spec:
     airflow:
       # select intel nodes only
       defaultNodeSelector:
-        kubernetes.io/arch: arm64
+        kubernetes.io/arch: amd64
       # remove multi-user settings
       usersUpdate: false
       legacyCommands:
@@ -229,7 +229,7 @@ spec:
     postgresql:
       master:
         nodeSelector:
-          kubernetes.io/arch: arm64
+          kubernetes.io/arch: amd64
       resources:
         requests:
           memory: 200Mi
@@ -237,7 +237,7 @@ spec:
     redis:
       master:
         nodeSelector:
-          kubernetes.io/arch: arm64
+          kubernetes.io/arch: amd64
     flower:
       resources:
         requests:
