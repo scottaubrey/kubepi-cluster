@@ -227,10 +227,17 @@ spec:
         secret:
           secretName: surveymonkey-credentials
     postgresql:
+      master:
+        nodeSelector:
+          kubernetes.io/arch: arm64
       resources:
         requests:
           memory: 200Mi
           cpu: 100m
+    redis:
+      master:
+        nodeSelector:
+          kubernetes.io/arch: arm64
     flower:
       resources:
         requests:
