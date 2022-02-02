@@ -27,6 +27,9 @@ spec:
         host: data-hub--test.elifesciences.org
         path: "/flower"
     airflow:
+      # select intel nodes only
+      defaultNodeSelector:
+        kubernetes.io/arch: arm64
       # remove multi-user settings
       usersUpdate: false
       legacyCommands:
