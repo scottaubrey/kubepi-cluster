@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - ../base/sciencebeam
   - ../base/basex-validator
-  - ../base/data-hub
+  # - ../base/data-hub
   # - ../base/editor
   # - ../base/reviewer
 patchesStrategicMerge:
