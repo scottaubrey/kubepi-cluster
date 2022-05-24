@@ -16,10 +16,8 @@ spec:
       labels:
         app: api-dummy
     spec:
-      nodeSelector:
-        kubernetes.io/arch: amd64
       containers:
       - name: api-dummy
-        image: elifesciences/api-dummy:6afd3ffdecf217d791a6f871a76df32f67a48b16
+        image: scottaubrey/elifesciences-api-dummy:632c69209eee593facdcea21c3d202cfeeee85e1
         ports:
         - containerPort: 8080
