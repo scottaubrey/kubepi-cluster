@@ -1,0 +1,37 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: nginx-config
+  namespace: journal
+data:
+  nginx.conf: |
+    events {
+    }
+    http {
+      server {
+        server_name localhost;
+        listen 80;
+        root /srv/journal/web;
+
+        location ~ \..*/.*\.php$ {
+            return 403;
+        }
+
+        location / {
+            try_files $uri /app.php$is_args$query_string;
+        }
+
+        location ~ ^/app\.php(/|$) {
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            include fastcgi_params;
+            fastcgi_param SCRIPT_FILENAME $request_filename;
+            fastcgi_intercept_errors on;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_param APP_ENV demo;
+            fastcgi_param SYMFONY__API_URL http://api-dummy:8080;
+            fastcgi_hide_header Content-Security-Policy;
+            fastcgi_hide_header X-Content-Security-Policy;
+            internal;
+        }
+      }
+    }

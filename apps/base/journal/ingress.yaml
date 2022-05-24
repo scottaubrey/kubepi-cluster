@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: journal
+  namespace: journal
+spec:
+  rules:
+  - host: journal.kubepi
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: journal
+            port:
+              number: 80
