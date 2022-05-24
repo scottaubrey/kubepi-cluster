@@ -5,3 +5,5 @@ resources:
 - namespace.yaml
 - api-dummy-deployment.yaml
 - api-dummy-service.yaml
+- redis-deployment.yaml
+- redis-service.yaml
