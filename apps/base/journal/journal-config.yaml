@@ -31,6 +31,7 @@ data:
         trusted_hosts:
           - localhost
           - web
+          - journal.kubepi
         status_checks:
             Articles: articles
         oauth2_client_id: some-id
