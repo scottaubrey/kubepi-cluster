@@ -9,3 +9,5 @@ resources:
 - redis-service.yaml
 - journal-deployment.yaml
 - journal-service.yaml
+- journal-nginx-config.yaml
+- journal-ingress.yaml

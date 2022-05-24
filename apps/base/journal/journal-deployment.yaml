@@ -24,7 +24,7 @@ spec:
         ports:
         - containerPort: 9000
         volumeMounts:
-        - name: shared-files
+        - name: asset-files
           mountPath: /srv/nginx/web
         lifecycle:
           postStart:
@@ -36,7 +36,7 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-        - name: shared-files
+        - name: asset-files
           mountPath: /srv/journal/web
         - name: nginx-config-volume
           mountPath: /etc/nginx/nginx.conf
