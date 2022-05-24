@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-dummy
+  namespace: journal
+  labels:
+    app: api-dummy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-dummy
+  template:
+    metadata:
+      namespace: journal
+      labels:
+        app: api-dummy
+    spec:
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      containers:
+      - name: api-dummy
+        image: elifesciences/api-dummy:6afd3ffdecf217d791a6f871a76df32f67a48b16
+        ports:
+        - containerPort: 8080
