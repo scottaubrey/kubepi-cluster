@@ -7,3 +7,5 @@ resources:
 - api-dummy-service.yaml
 - redis-deployment.yaml
 - redis-service.yaml
+- journal-deployment.yaml
+- journal-service.yaml

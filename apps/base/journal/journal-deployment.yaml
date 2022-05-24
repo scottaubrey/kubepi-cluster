@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: journal
+  namespace: journal
+  labels:
+    app: journal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: journal
+  template:
+    metadata:
+      namespace: journal
+      labels:
+        app: journal
+    spec:
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      containers:
+      - name: journal
+        image: elifesciences/journal:d1f096c9819215532e1f9bf3c3c3f6c44a101b8d
+        ports:
+        - containerPort: 9000
+      - name: nginx
+        image: nginx:1.21.6
+        ports:
+        - containerPort: 80
