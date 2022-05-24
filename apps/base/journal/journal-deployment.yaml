@@ -16,6 +16,8 @@ spec:
       labels:
         app: journal
     spec:
+      nodeSelector:
+        kubernetes.io/arch: arm64
       containers:
       - name: journal
         image: scottaubrey/elifesciences-journal:e967dad255b2710eece03af5098f555f3c3605a9
