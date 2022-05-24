@@ -10,4 +10,5 @@ resources:
 - journal-deployment.yaml
 - journal-service.yaml
 - journal-nginx-config.yaml
+- journal-config.yaml
 - journal-ingress.yaml
