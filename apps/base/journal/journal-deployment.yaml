@@ -26,6 +26,9 @@ spec:
         volumeMounts:
         - name: asset-files
           mountPath: /srv/nginx/web
+        - name: journal-config-volume
+          mountPath: /srv/journal/app/config/parameters.yml
+          subPath: parameters.yml
         lifecycle:
           postStart:
             exec:
@@ -48,3 +51,7 @@ spec:
       - name: nginx-config-volume
         configMap:
           name: nginx-config
+
+      - name: journal-config-volume
+        configMap:
+          name: journal-config
