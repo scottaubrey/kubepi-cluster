@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis
+  namespace: journal
   labels:
     app: redis
 spec:
@@ -11,6 +12,7 @@ spec:
       app: redis
   template:
     metadata:
+      namespace: journal
       labels:
         app: redis
     spec:
