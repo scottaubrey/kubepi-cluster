@@ -33,6 +33,13 @@ spec:
           postStart:
             exec:
               command: ["/bin/sh", "-c", "cp -r /srv/journal/web/assets /srv/journal/web/favicon.ico /srv/nginx/web/"]
+        env:
+          - name: SYMFONY__API_URL
+            value: http://api_dummy:8080
+          - name: SYMFONY__API_URL_PUBLIC
+            value: http://api_dummy:8080
+          - name: SYMFONY__API_KEY
+            value: public
 
       - name: nginx
         image: nginx:1.21.6
