@@ -20,7 +20,7 @@ spec:
         kubernetes.io/arch: arm64
       containers:
       - name: journal
-        image: scottaubrey/elifesciences-journal:e967dad255b2710eece03af5098f555f3c3605a9
+        image: scottaubrey/elifesciences-journal:0c3d863d44d44fbedb94908a4c5064505503bfdb
         ports:
         - containerPort: 9000
         volumeMounts:
