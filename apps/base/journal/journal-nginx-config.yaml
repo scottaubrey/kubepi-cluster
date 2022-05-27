@@ -18,6 +18,7 @@ data:
         }
 
         location / {
+            include  /etc/nginx/mime.types;
             try_files $uri /app.php$is_args$query_string;
         }
 
