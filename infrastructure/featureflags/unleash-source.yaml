@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
-  name: flagsmith
+  name: unleash
 spec:
   interval: 30m
-  url: https://flagsmith.github.io/flagsmith-charts/
+  url: https://docs.getunleash.io/helm-charts
