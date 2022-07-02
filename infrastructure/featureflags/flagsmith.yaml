@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: flagsmith
+
+spec:
+  releaseName: flagsmith
+  chart:
+    spec:
+      chart: flagsmith
+      sourceRef:
+        kind: HelmRepository
+        name: flagsmith
+      version: 0.10.0
+  interval: 1m
+
+  values:
+    ingress:
+    frontend:
+      enabled: true
+      hosts:
+      - host: featureflags.kubepi
+        paths:
+          - /
