@@ -18,6 +18,7 @@ spec:
     ingress:
       enabled: true
       hosts:
-      - host: featureflags.kubepi
-        paths:
-          - /
+        - host: featureflags.kubepi
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
