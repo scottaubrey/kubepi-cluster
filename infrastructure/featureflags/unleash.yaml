@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: unleash
+
+spec:
+  releaseName: unleash
+  chart:
+    spec:
+      chart: unleash
+      sourceRef:
+        kind: HelmRepository
+        name: unleash
+      version: 2.6.1
+  interval: 1m
+
+  values:
+    ingress:
+      enabled: true
+      hosts:
+      - host: featureflags.kubepi
+        paths:
+          - /
