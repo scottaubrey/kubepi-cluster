@@ -15,3 +15,13 @@ spec:
             name: journal
             port:
               number: 80
+  - host: journal.kubepi.aubrey.org.uk
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: journal
+            port:
+              number: 80
