@@ -38,3 +38,4 @@ spec:
     - aubrey.org.uk
     sources:
     - ingress
+    logLevel: debug
