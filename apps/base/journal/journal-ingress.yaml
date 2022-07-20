@@ -4,6 +4,9 @@ metadata:
   name: journal
   namespace: journal
 spec:
+  tls:
+  - hosts:
+    - journal.kubepi.aubrey.org.uk
   rules:
   - host: journal.kubepi
     http:
