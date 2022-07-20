@@ -11,12 +11,12 @@ spec:
         kind: HelmRepository
         name: ingress-nginx
         namespace: flux-system
-      version: "4.0.13"
+      version: "4.2.0"
   interval: 1h0m0s
   values:
-    controller:
-      ingressClassResource:
-        name: internal-nginx  # default: nginx
-        enabled: true
-        default: false
-        controllerValue: "k8s.io/internal-ingress-nginx"
+    # controller:
+    #   ingressClassResource:
+    #     name: internal-nginx  # default: nginx
+    #     enabled: true
+    #     default: false
+    #     controllerValue: "k8s.io/internal-ingress-nginx"

@@ -5,5 +5,4 @@ resources:
   - kubepi.yaml
   - longhorn.yaml
   - bitnami-labs-sealedsecrets.yaml
-  - ingress-nginx.yaml
   - minio.yaml
