@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: journal
   namespace: journal
+  annotations:
+    external-dns.alpha.kubernetes.io/target: kubepi.aubrey.org.uk
 spec:
   tls:
   - hosts:
