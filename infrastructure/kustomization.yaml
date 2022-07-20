@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - sources
   - metallb
-  - loadbalancer-config
+  # - loadbalancer-config
   - ingress
   - storage
   - sealed-secrets
