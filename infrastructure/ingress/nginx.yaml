@@ -13,6 +13,7 @@ spec:
       version: "4.2.0"
   interval: 1h0m0s
   values:
+    watchIngressWithoutClass: true
     # controller:
     #   ingressClassResource:
     #     name: internal-nginx  # default: nginx
