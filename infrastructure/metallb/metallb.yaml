@@ -13,3 +13,5 @@ spec:
       version: "0.13.3"
   interval: 1h0m0s
   values:
+    crds:
+      enable: false
