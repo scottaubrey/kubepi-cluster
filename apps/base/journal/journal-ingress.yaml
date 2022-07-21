@@ -5,10 +5,12 @@ metadata:
   namespace: journal
   annotations:
     external-dns.alpha.kubernetes.io/target: kubepi.aubrey.org.uk
+    cert-manager.io/cluster-issuer: letsencrypt
 spec:
   tls:
   - hosts:
     - journal.kubepi.aubrey.org.uk
+    secretName: journal-cert
   rules:
   - host: journal.kubepi
     http:
