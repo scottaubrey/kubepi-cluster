@@ -5,3 +5,5 @@ resources:
   - namespace.yaml
   - metallb-source.yaml
   - metallb.yaml
+  - addresspool.yaml
+  - advertisement.yaml
