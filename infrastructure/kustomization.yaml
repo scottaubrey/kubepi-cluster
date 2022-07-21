@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - sources
   - metallb
+  - ingress
   - storage
   - sealed-secrets
   - minio
