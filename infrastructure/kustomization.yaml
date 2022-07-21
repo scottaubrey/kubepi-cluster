@@ -10,3 +10,4 @@ resources:
   - localstack
   - featureflags
   - external-dns
+  - certmanager
