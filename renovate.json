@@ -5,6 +5,9 @@
       "^system/monitoring/kube-web-view/deployment\\.yaml$"
     ]
   },
+  "flux": {
+    "fileMatch": ["apps/.+\\.yaml$", "infrastructure/.+\\.yaml$"]
+  },
   "assignees": [
     "scottaubrey"
   ],
