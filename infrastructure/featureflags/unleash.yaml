@@ -15,6 +15,11 @@ spec:
   interval: 1m
 
   values:
+    postgresql:
+      image:
+        registry: ghcr.io
+        repository: zcube/bitnami-compat/postgresql
+        tag: 14.4.0-debian-11-r18
     ingress:
       enabled: true
       hosts:
