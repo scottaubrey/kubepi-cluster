@@ -22,7 +22,7 @@ spec:
   values:
     replicaCount: 1
     ingress:
-      host: libero-editor--staging.elifesciences.org
+      host: libero-editor.kubepi
     client:
       image:
         repository: liberoadmin/editor-client
