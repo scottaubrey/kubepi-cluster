@@ -9,5 +9,5 @@ resources:
   - minio
   - localstack
   # - featureflags
-  - external-dns
-  - cert-manager
+  # - external-dns
+  # - cert-manager
