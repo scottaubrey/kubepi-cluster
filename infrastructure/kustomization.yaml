@@ -8,6 +8,6 @@ resources:
   - sealed-secrets
   - minio
   - localstack
-  - featureflags
+  # - featureflags
   - external-dns
   - cert-manager
