@@ -6,6 +6,6 @@ resources:
   # - ../base/data-hub
   # - ../base/editor
   # - ../base/reviewer
-  - ../base/journal
+  # - ../base/journal
   - ../base/mattermost
 patchesStrategicMerge:
