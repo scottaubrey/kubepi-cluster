@@ -3,4 +3,5 @@ kind: Kustomization
 namespace: kubeseal
 resources:
   - namespace.yaml
+  - sealedsecrets-source.yaml
   - sealed-secrets-controller-release.yaml
