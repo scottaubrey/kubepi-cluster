@@ -3,6 +3,5 @@ kind: Kustomization
 namespace: storage
 resources:
   - namespace.yaml
+  - longhorn-source.yaml
   - longhorn-release.yaml
-  - longhorn-secret.yaml
-  - longhorn-ingress.yaml
