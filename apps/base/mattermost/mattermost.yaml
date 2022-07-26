@@ -7,7 +7,7 @@ spec:
   releaseName: mattermost
   chart:
     spec:
-      chart: mattermos
+      chart: mattermost
       sourceRef:
         kind: HelmRepository
         name: mattermost
