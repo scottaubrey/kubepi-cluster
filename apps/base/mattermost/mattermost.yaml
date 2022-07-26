@@ -7,11 +7,11 @@ spec:
   releaseName: mattermost
   chart:
     spec:
-      chart: mattermost
+      chart: mattermost-enterprise-edition
       sourceRef:
         kind: HelmRepository
         name: mattermost
-      version: 6.6.9
+      version: 2.6.10
   interval: 1m
 
   values:
