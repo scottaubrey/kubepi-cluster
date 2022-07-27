@@ -21,4 +21,4 @@ spec:
     ingress:
       enabled: true
       hosts:
-      - host: mattermost.aubrey.org.uk
+      - mattermost.aubrey.org.uk
