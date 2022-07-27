@@ -16,7 +16,7 @@ spec:
 
   values:
     mysqlha:
-      enabled: true
+      enabled: false
       mysqlUser: sampleUser
       mysqlPassword: samplePassword
     ingress:
