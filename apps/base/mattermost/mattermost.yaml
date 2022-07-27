@@ -15,7 +15,8 @@ spec:
   interval: 1m
 
   values:
-    mysql:
+    mysqlha:
+      enabled: true
       mysqlUser: sampleUser
       mysqlPassword: samplePassword
     ingress:
