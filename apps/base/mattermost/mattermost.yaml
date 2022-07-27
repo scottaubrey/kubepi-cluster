@@ -7,20 +7,15 @@ spec:
   releaseName: mattermost
   chart:
     spec:
-      chart: mattermost-enterprise-edition
+      chart: mattermost-team-edition
       sourceRef:
         kind: HelmRepository
         name: mattermost
-      version: 2.6.10
+      version: 7.1.2
   interval: 1m
 
   values:
-    global:
-      features:
-        database:
-          useInternal: false
-    mysqlha:
-      enabled: false
+    mysql:
       mysqlUser: sampleUser
       mysqlPassword: samplePassword
     ingress:
