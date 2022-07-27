@@ -21,7 +21,4 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: mattermost.aubrey.org.uk
-          paths:
-            - path: /
-              pathType: ImplementationSpecific
+      - host: mattermost.aubrey.org.uk
