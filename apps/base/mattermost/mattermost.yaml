@@ -22,3 +22,5 @@ spec:
       enabled: true
       hosts:
       - mattermost.aubrey.org.uk
+    persistence:
+      size: 5Gi
