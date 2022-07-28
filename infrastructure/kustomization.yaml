@@ -6,7 +6,7 @@ resources:
   # - storage
   - sealed-secrets
   - minio
-  - localstack
+  # - localstack
   - featureflags
   - external-dns
   - cert-manager
