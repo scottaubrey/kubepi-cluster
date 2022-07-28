@@ -3,10 +3,10 @@ kind: Kustomization
 resources:
   - metallb
   - ingress
-  - storage
+  # - storage
   - sealed-secrets
   - minio
-  # - localstack
+  - localstack
   - featureflags
   - external-dns
   - cert-manager
