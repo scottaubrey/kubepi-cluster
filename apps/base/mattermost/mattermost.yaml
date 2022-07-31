@@ -16,6 +16,8 @@ spec:
 
   values:
     mysql:
+      repository: mariadb
+      imageTag: '10.8'
       mysqlUser: sampleUser
       mysqlPassword: samplePassword
     ingress:
