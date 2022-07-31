@@ -18,7 +18,6 @@ spec:
         memory: 512Mi
     replicas: 4
     persistence:
-      storageClass: longhorn
       size: 5Gi
     ingress:
       enabled: false
