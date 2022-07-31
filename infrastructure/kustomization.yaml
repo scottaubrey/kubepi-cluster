@@ -5,7 +5,7 @@ resources:
   - ingress
   - storage
   - sealed-secrets
-  - minio
+  # - minio
   # - localstack
   # - featureflags
   - external-dns
