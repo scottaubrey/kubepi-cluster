@@ -18,6 +18,7 @@ spec:
         memory: 512Mi
     replicas: 4
     persistence:
+      storageClass: local-path
       size: 5Gi
     ingress:
       enabled: false
