@@ -24,6 +24,9 @@ spec:
       enabled: true
       hosts:
       - mattermost.aubrey.org.uk
+      annotations:
+        external-dns.alpha.kubernetes.io/target: kubepi.aubrey.org.uk
+        cert-manager.io/cluster-issuer: letsencrypt
     persistence:
       size: 5Gi
     image:
