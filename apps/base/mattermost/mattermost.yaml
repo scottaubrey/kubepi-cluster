@@ -23,7 +23,7 @@ spec:
     ingress:
       enabled: true
       tls:
-        secretName: mattermost-cert
+      - secretName: mattermost-cert
         hosts:
         - mattermost.aubrey.org.uk
       hosts:
