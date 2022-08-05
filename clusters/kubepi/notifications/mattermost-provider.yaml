@@ -6,5 +6,6 @@ metadata:
 spec:
   type: slack
   channel: Notifications
+  username: kubepi
   secretRef:
     name: mattermost-url
