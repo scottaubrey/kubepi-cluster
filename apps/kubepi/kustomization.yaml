@@ -7,5 +7,5 @@ resources:
   # - ../base/editor
   # - ../base/reviewer
   # - ../base/journal
-  # - ../base/mattermost
+  - ../base/mattermost
 patchesStrategicMerge:

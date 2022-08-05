@@ -16,6 +16,8 @@ spec:
 
   values:
     mysql:
+      image: mariadb
+      imageTag: '10.8'
       mysqlUser: sampleUser
       mysqlPassword: samplePassword
     ingress:
@@ -24,3 +26,6 @@ spec:
       - mattermost.aubrey.org.uk
     persistence:
       size: 5Gi
+    image:
+      repository: ghcr.io/scottaubrey/mattermost-team-server
+      tag: 7.1.2@sha256:909c2c30e21200933af5d248dc2aba74e71ba29e6b1833f1615a4d10947ab47c
