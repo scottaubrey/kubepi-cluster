@@ -22,7 +22,9 @@ spec:
       mysqlPassword: samplePassword
     ingress:
       enabled: true
-      tls: true
+      tls:
+        hosts:
+        - mattermost.aubrey.org.uk
       hosts:
       - mattermost.aubrey.org.uk
       annotations:
