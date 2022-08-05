@@ -30,4 +30,5 @@ spec:
       repository: ghcr.io/scottaubrey/mattermost-team-server
       tag: 7.1.2@sha256:909c2c30e21200933af5d248dc2aba74e71ba29e6b1833f1615a4d10947ab47c
     initContainerImage:
-      repository: curlimages/curl
+      repository: ghcr.io/scottaubrey/curl
+      tag: 7.1.2
