@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: mattermost-url
+  namespace: flux-system
+spec:
+  encryptedData:
+    address: AgC25wA98LkDJaE+JeAl6xikgzPiQdr6XIkrOKILHM6HALjXbf3KmchW+FR6ENsBC2vVZSArJ2ENNdjb/H3ZSHm9UcAaQW4yK4g5okKay/sGq7CagJtMkgbUYu408Be6MVfoAEPFGMX2v7mwEUfBOPQmZ9bX8H3Ojcb1GDePFv1c7cZdKBQcxERQq6Pz5xGKhO1sHRm6MdlaJB7ZyCJcdLp6GWE7qJK3lQ9d5RDDZvHcGE0QUg0crSyBfCb8eNVSXPK8VTOUhvktx2xsOKmEC/zuCa9XHqrI166yFa9PsjmuM53PL2Cmr4yepI1SQ/rMFs3TCkvlthRu128jt4sPOR+B53YCUqxPs8INzEs0PycvjI/UcLagIOEYKGRxiC2qibHExHlfghXDBLI8O4QIZ18cxcpV8IZG2sb03quykz4fOYXUeyJV7PP1hrMMYemYtBYJR3YNorVucH2gK1I9leUSy7Lfc9wcHx6TnMDEfWksfEqC+ZlTPgEdRBuL9LSmJA9SXyOM/29d5Tu0BAemvHXgjHStbs/oyHFgGoeuwQBaNvZ7H1+Py1jxk8zH4cF/CxXHgYoTOiaYdE1PxeCe+WFDvPMnZfFG+8pryMCdUz+Z+SwD1KWZZ37S5tfMg2S+nG32EgeACV5r/v8X6mWzlNmd7b9cmvGrn/ukdYrJDtSrRImlsp285K06GPm4XfT53K2EVsDg1G3jMiT5j1++TFBf0xRkBQqamyOy7vN2CuBQiTS5VGtSBYuU3GT6jBCbBODMHzbUBQbCf4cPJbL0gXRFNA==
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: mattermost-url
+      namespace: flux-system
+

@@ -1,0 +1,10 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Provider
+metadata:
+  name: mattermost
+  namespace: flux-system
+spec:
+  type: slack
+  channel: Notifications
+  secretRef:
+    name: mattermost-url
