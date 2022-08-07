@@ -3,7 +3,8 @@ kind: Kustomization
 resources:
   - metallb
   - ingress
-  - storage
+  - local-storage
+  - longhorn
   - sealed-secrets
   # - minio
   # - localstack
