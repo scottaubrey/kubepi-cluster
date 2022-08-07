@@ -12,3 +12,6 @@ spec:
         name: metrics-server
       version: "3.8.2"
   interval: 1h0m0s
+  values:
+    args:
+    - --kubelet-preferred-address-types=Hostname
