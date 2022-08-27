@@ -9,4 +9,3 @@ spec:
   username: kubepi
   secretRef:
     name: mattermost-url
-    something: wrong

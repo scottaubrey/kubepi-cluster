@@ -4,8 +4,8 @@ metadata:
   name: googlechat
   namespace: flux-system
 spec:
-  type: slack
+  type: googlechat
   channel: Notifications
-  username: kubepi
+  username: Kubepi-flux
   secretRef:
     name: googlechat-url
