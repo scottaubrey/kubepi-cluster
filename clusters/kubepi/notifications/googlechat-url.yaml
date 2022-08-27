@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: googlechat-url
+  namespace: flux-system
+spec:
+  encryptedData:
+    address: AgBhu+a1S2s2IYjsQRLm9rSm4jfJriSlKZwBu+ZUCKBOpFGwv8tx2WS9hQFxfGnCvvhbd+/5+MkFmH6kfSmUlccg0jA1JWgECSod46e6o/dUosDsjfmL40Qt4daxAj6dbY8MxRa/Ec5XcGwHoY3tJKwti/FnO+Vq13H+FjMFSQmaYjiImCDVCCpguO6sJlqA4R/1XbJiRxk2qNGTA7f/a3CTMkebhiw30hhV/Zh3wdsJ548d58BG4NYx4w1dw0FpsGHm2e26naaFpxo0lPcRlCcgIhYxNbroYLscnnQdHYnYO2Sn8aIftPk7GuPL3wTeDTROXC87vCP76VxzmMfW/Jr9TFaYFGWT3rp/LYNxyTKtZmv6xZmDX0ApvLjuh7xugobalskq1C2Pwh698gQAuNSOPLRz59nze0HzDNc4I/t6f8J2UzQsniYvgUe9FvTXMr2SysMQyIH+RqY1Z/sKVG8dFoM1J2wt11t1+K1Xb6FpmaWyPoeunM1wXGG6CM7CdMSxcA1CqkXvy895LcAFa6v2GJWUmkMrnNY3PvGwRkp/+SovEaZbLyk+8HbMZfoNeNF7lq8LTcO7ppD1JN84j1luqBztV+Vzxc5Gb25Ssjb6R/bI9GTk4U6Rpati6Fqaxccfw7KXHULfVKi0vCNgLebxVUmKLHwX9obKX8o+0w0SWKY6PGS+gaBEIKyOg92CZNEnlnMlFRrXPXo2jK1pQpLD1VdLgpCC/VRIVXSkDvtHidh4gEPcLA/BwUEjUAerWUtrhFwe5lZ+BPAkciCkVLOZa909hzvX1Gb3ihstS96AiZNR6xadYkgYwFTCATh1SZRv4prsGYf5a6if+2fQYCtFDKfWbOYm7n68YqXWJvtw3XyoOD4sxBfTMmF/LDP+sal3wAucdCtfZoY1oA==
+  template:
+    data: null
+    metadata:
+      creationTimestamp: null
+      name: googlechat-url
+      namespace: flux-system
+

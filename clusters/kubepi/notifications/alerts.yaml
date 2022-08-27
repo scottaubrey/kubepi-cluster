@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   providerRef:
-    name: mattermost
+    name: googlechat
   eventSeverity: info
   eventSources:
     - kind: GitRepository
