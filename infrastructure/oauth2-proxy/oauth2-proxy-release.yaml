@@ -28,5 +28,7 @@ spec:
       annotations:
         external-dns.alpha.kubernetes.io/target: kubepi.aubrey.org.uk
         cert-manager.io/cluster-issuer: letsencrypt
-
+    extraArgs:
+      whitelist-domain: .aubrey.org.uk
+      cookie-domain: .aubrey.org.uk
     replicaCount: 2
