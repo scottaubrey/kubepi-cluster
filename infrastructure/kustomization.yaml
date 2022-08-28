@@ -12,3 +12,4 @@ resources:
   # - featureflags
   - external-dns
   - cert-manager
+  - oauth2-proxy
