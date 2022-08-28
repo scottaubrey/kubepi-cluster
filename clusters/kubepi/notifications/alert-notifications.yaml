@@ -16,3 +16,5 @@ spec:
       name: '*'
     - kind: HelmRelease
       name: '*'
+  exclusionList:
+    - 'metallb.io configured'
