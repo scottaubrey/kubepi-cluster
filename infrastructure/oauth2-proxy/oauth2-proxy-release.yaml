@@ -21,4 +21,12 @@ spec:
       enabled: "true"
       hosts:
         - auth.kubepi.aubrey.org.uk
+      tls:
+      - secretName: oauth2-proxy-cert
+        hosts:
+        - auth.kubepi.aubrey.org.uk
+      annotations:
+        external-dns.alpha.kubernetes.io/target: kubepi.aubrey.org.uk
+        cert-manager.io/cluster-issuer: letsencrypt
+
     replicaCount: 2
