@@ -75,7 +75,7 @@ spec:
       podDisruptionBudget:
         enabled: true
       alertmanagerSpec:
-        configSecret: alertmanager-prometheus-operator
+        configSecret: alertmanager-config
         replicas: 2
         resources:
           limits:
