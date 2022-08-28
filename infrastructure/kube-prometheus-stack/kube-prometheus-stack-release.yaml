@@ -21,9 +21,15 @@ spec:
         enabled: "true"
         hosts:
           - grafana.kubepi.aubrey.org.uk
+        tls:
+          - secretName: kube-prometheus-stack-grafana-cert
+            hosts:
+              - grafana.kubepi.aubrey.org.uk
         annotations:
           nginx.ingress.kubernetes.io/auth-url: "https://auth.kubepi.aubrey.org.uk/oauth2/auth"
           nginx.ingress.kubernetes.io/auth-signin: "https://auth.kubepi.aubrey.org.uk/oauth2/start?rd=https%3A%2F%2F$host$request_uri"
+          external-dns.alpha.kubernetes.io/target: kubepi.aubrey.org.uk
+          cert-manager.io/cluster-issuer: letsencrypt
       plugins:
         - btplc-status-dot-panel
       env:
@@ -41,9 +47,15 @@ spec:
         enabled: "true"
         hosts:
           - prometheus.kubepi.aubrey.org.uk
+        tls:
+          - secretName: kube-prometheus-stack-prometheus-cert
+            hosts:
+              - prometheus.kubepi.aubrey.org.uk
         annotations:
           nginx.ingress.kubernetes.io/auth-url: "https://auth.kubepi.aubrey.org.uk/oauth2/auth"
           nginx.ingress.kubernetes.io/auth-signin: "https://auth.kubepi.aubrey.org.uk/oauth2/start?rd=https%3A%2F%2F$host$request_uri"
+          external-dns.alpha.kubernetes.io/target: kubepi.aubrey.org.uk
+          cert-manager.io/cluster-issuer: letsencrypt
       podDisruptionBudget:
         enabled: false
       prometheusSpec:
@@ -74,6 +86,12 @@ spec:
         enabled: "true"
         hosts:
           - alertmanager.kubepi.aubrey.org.uk
+        tls:
+          - secretName: kube-prometheus-stack-alertmanager-cert
+            hosts:
+              - alertmanager.kubepi.aubrey.org.uk
         annotations:
           nginx.ingress.kubernetes.io/auth-url: "https://auth.kubepi.aubrey.org.uk/oauth2/auth"
           nginx.ingress.kubernetes.io/auth-signin: "https://auth.kubepi.aubrey.org.uk/oauth2/start?rd=https%3A%2F%2F$host$request_uri"
+          external-dns.alpha.kubernetes.io/target: kubepi.aubrey.org.uk
+          cert-manager.io/cluster-issuer: letsencrypt
