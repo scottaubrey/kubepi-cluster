@@ -10,7 +10,6 @@ spec:
   chart:
     spec:
       chart: ./contrib/helm
-      version: 2.0.3
       sourceRef:
         kind: GitRepository
         name: calert
