@@ -3,5 +3,9 @@ kind: Kustomization
 namespace: kube-prometheus-stack
 resources:
   - namespace.yaml
+  - secrets/alertmanager-config.yaml
   - kube-prometheus-stack-source.yaml
   - kube-prometheus-stack-release.yaml
+  - secrets/googlechat-provider-config.yaml
+  - calert-source.yaml
+  - calert-release.yaml
