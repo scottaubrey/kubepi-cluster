@@ -9,7 +9,7 @@ spec:
   releaseName: calert
   chart:
     spec:
-      chart: ./contrib/helm
+      chart: ./contrib/helm/
       sourceRef:
         kind: GitRepository
         name: calert
