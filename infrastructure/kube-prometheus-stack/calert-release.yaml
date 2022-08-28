@@ -15,12 +15,7 @@ spec:
         kind: HelmRepository
         name: calert
       interval: 1m
-  values:
-    providers:
-      Notifications:
-        type: google_chat
-        endpoint:
   valuesFrom:
-  - secretKeyRef:
-      name: googlechat-provider-config
-      key: values.yaml
+  - kind: Secret
+    name: googlechat-provider-config
+    valuesKey: values.yaml
