@@ -13,9 +13,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: calert
-        namespace: kube-prometheus-stack
       interval: 1m
-      reconcileStrategy: Revision
   valuesFrom:
   - kind: Secret
     name: googlechat-provider-config
