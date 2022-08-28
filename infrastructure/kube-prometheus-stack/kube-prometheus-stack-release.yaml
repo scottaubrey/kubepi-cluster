@@ -1,0 +1,79 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kube-prometheus-stack
+
+spec:
+  interval: 1m
+  releaseName: kube-prometheus-stack
+  chart:
+    spec:
+      chart: kube-prometheus-stack
+      version: 39.9.0
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus-stack
+      interval: 1m
+  values:
+    grafana:
+      ingress:
+        enabled: "true"
+        hosts:
+          - grafana.kubepi.aubrey.org.uk
+        annotations:
+          nginx.ingress.kubernetes.io/auth-url: "https://auth.kubepi.aubrey.org.uk/oauth2/auth"
+          nginx.ingress.kubernetes.io/auth-signin: "https://auth.kubepi.aubrey.org.uk/oauth2/start?rd=https%3A%2F%2F$host$request_uri"
+      plugins:
+        - btplc-status-dot-panel
+      env:
+        GF_AUTH_ANONYMOUS_ENABLED: "true"
+        GF_AUTH_ANONYMOUS_ORG_NAME: "Main Org."
+        GF_AUTH_ANONYMOUS_ORG_ROLE: "Viewer"
+      rbac:
+        pspUseAppArmor: false
+        pspEnabled: true
+    prometheus-node-exporter:
+      rbac:
+        pspEnabled: true
+    prometheus:
+      ingress:
+        enabled: "true"
+        hosts:
+          - prometheus.kubepi.aubrey.org.uk
+        annotations:
+          nginx.ingress.kubernetes.io/auth-url: "https://auth.kubepi.aubrey.org.uk/oauth2/auth"
+          nginx.ingress.kubernetes.io/auth-signin: "https://auth.kubepi.aubrey.org.uk/oauth2/start?rd=https%3A%2F%2F$host$request_uri"
+      podDisruptionBudget:
+        enabled: false
+      prometheusSpec:
+        replicas: 1
+        resources:
+          limits:
+            memory: 2000Mi
+          requests:
+            memory: 1300Mi
+        serviceMonitorSelectorNilUsesHelmValues: false
+        podMonitorSelectorNilUsesHelmValues: false
+        ruleSelector:
+          matchExpressions:
+            - {key: app, operator: In, values: [kube-prometheus-stack, flux, kubediff, cert-manager]}
+
+    alertmanager:
+      podDisruptionBudget:
+        enabled: true
+      alertmanagerSpec:
+        configSecret: alertmanager-prometheus-operator
+        replicas: 2
+        resources:
+          limits:
+            memory: 200Mi
+          requests:
+            memory: 20Mi
+      ingress:
+        enabled: "true"
+        hosts:
+          - alertmanager.kubepi.aubrey.org.uk
+        annotations:
+          nginx.ingress.kubernetes.io/auth-url: "https://auth.kubepi.aubrey.org.uk/oauth2/auth"
+          nginx.ingress.kubernetes.io/auth-signin: "https://auth.kubepi.aubrey.org.uk/oauth2/start?rd=https%3A%2F%2F$host$request_uri"

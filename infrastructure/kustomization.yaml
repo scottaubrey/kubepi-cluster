@@ -13,3 +13,4 @@ resources:
   - external-dns
   - cert-manager
   - oauth2-proxy
+  - kube-prometheus-stack
