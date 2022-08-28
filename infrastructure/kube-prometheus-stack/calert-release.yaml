@@ -14,6 +14,13 @@ spec:
         kind: GitRepository
         name: calert
       interval: 1m
+  values:
+    templates:
+      message.tmpl: |
+        *({{.Labels.severity | toUpper }}) {{ .Labels.alertname | Title }} - {{.Status | Title }}*
+        {{ range .Annotations.SortedPairs -}}
+        {{ .Name | Title }}: {{ .Value}}
+        {{ end -}}
   valuesFrom:
   - kind: Secret
     name: googlechat-provider-config
