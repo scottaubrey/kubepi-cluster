@@ -1,8 +1,10 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
 metadata:
   name: calert
 spec:
-  interval: 5m
+  interval: 1m
+  ref:
+    tag: v2.0.2
   url: https://github.com/mr-karan/calert

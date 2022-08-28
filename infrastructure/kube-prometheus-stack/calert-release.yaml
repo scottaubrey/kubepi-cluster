@@ -9,10 +9,10 @@ spec:
   releaseName: calert
   chart:
     spec:
-      chart: calert
+      chart: ./contrib/helm
       version: 2.0.3
       sourceRef:
-        kind: HelmRepository
+        kind: GitRepository
         name: calert
       interval: 1m
   valuesFrom:
