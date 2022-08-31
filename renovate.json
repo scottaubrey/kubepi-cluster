@@ -6,7 +6,7 @@
     ]
   },
   "flux": {
-    "fileMatch": ["apps/.+\\.yaml$", "infrastructure/.+\\.yaml$"]
+    "fileMatch": ["apps/.+\\.yaml$", "infrastructure/.+\\.yaml$", "clusters/.+\\.yaml$"]
   },
   "assignees": [
     "scottaubrey"
