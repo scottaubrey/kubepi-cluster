@@ -2,6 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: airflow
+  namespace: data-hub
 spec:
   interval: 30m
   url: https://airflow-helm.github.io/charts
