@@ -3,6 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: kube-prometheus-stack
+  namespace: kube-prometheus-stack
 
 spec:
   interval: 1m
@@ -95,3 +96,6 @@ spec:
           nginx.ingress.kubernetes.io/auth-signin: "https://auth.kubepi.aubrey.org.uk/oauth2/start?rd=https%3A%2F%2F$host$request_uri"
           external-dns.alpha.kubernetes.io/target: kubepi.aubrey.org.uk
           cert-manager.io/cluster-issuer: letsencrypt
+    kubeProxy:
+      serviceMonitor:
+    kubeEtcd:
