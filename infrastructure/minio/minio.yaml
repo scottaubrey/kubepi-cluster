@@ -11,7 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: minio
-      version: "3.4.5"
+      version: "3.6.6"
   interval: 1h0m0s
   values:
     resources:
