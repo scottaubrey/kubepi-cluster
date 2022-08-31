@@ -1,9 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: GitRepository
-metadata:
-  name: libero-editor
-spec:
-  interval: 1m0s
-  ref:
-    branch: node-selector
-  url: https://github.com/scottaubrey/libero-editor-formula

@@ -1,9 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: GitRepository
-metadata:
-  name: sciencebeam
-spec:
-  interval: 1m0s
-  ref:
-    branch: implement-newer-kuberenetes-ingress
-  url: https://github.com/scottaubrey/sciencebeam-charts
