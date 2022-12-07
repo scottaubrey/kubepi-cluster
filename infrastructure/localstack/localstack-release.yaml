@@ -11,7 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: localstack
-      version: "0.5.1"
+      version: "0.5.2"
   values:
     ingress:
       enabled: false
