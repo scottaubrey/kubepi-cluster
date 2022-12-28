@@ -33,4 +33,4 @@ spec:
             defaultMode: 0777
         - name: homeassistant-persistent-storage
           persistentVolumeClaim:
-            claimName: homeassistant-pv-claim
+            claimName: homeassistant
