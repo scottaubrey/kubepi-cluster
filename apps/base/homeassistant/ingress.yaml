@@ -1,0 +1,21 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: homeassistant
+spec:
+  tls:
+  - hosts:
+    - homeassistant.kubepi.aubrey.org.uk
+    secretName: journal-cert
+  rules:
+    - host: homeassistant.kubepi.aubrey.org.uk
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: homeassistant
+                port:
+                  number: 443
