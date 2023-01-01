@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: homeassistant
 resources:
 - namespace.yaml
+- homeassistant-config.yaml
 - pvc.yaml
 - deployment.yaml
 - service.yaml
